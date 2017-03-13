@@ -21,12 +21,12 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="YouLoop">
-  <meta name="twitter:description" content="貼上YouTube或Dailymotion影片網址，就為您重播到死！">
+  <meta name="twitter:description" content="<?= __('貼上YouTube, Dailymotion或Xuite影片網址，就為您重播到死！') ?>">
   <meta name="twitter:image" content="http://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="YouLoop">
-  <meta property="og:description" content="貼上YouTube或Dailymotion影片網址，就為您重播到死！">
+  <meta property="og:description" content="<?= __('貼上YouTube, Dailymotion或Xuite影片網址，就為您重播到死！') ?>">
   <meta property="og:url" content="http://app.boggy.tw/youloop">
   <meta property="og:site_name" content="YouLoop">
   <meta property="og:image" content="http://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
@@ -84,12 +84,21 @@
     </div>
 
     <hr>
-    <div class="panel panel-default history" v-show="history.length">
+    <div class="panel panel-default history">
       <div class="panel-heading">
         <h3 class="panel-title">
           <?= __('播放歷史') ?>
           <span class="badge">{{history.length}}</span>
-          <a class="btn btn-sm btn-default clear-btn" @click="clearHistory"><?= __('清除歷史') ?></a>
+
+          <div class="btn-group history-actions" role="group" aria-label="...">
+            <a class="btn btn-sm btn-default clear-btn" @click="exportHistory"><?= __('匯出') ?></a>
+            <a class="btn btn-sm btn-default clear-btn" @click="importHistory"><?= __('匯入') ?></a>
+            <a class="btn btn-sm btn-default clear-btn" @click="clearHistory"><?= __('清除歷史') ?></a>
+          </div>
+
+          <div class="import-file-container">
+            <input type="file" class="import-file" @change="importHistoryDataSelected">
+          </div>
         </h3>
       </div>
       <div class="panel-body">
@@ -138,6 +147,7 @@
   <script src="http://static.boggy.tw/vendor/vue.js/2.1.10/vue.min.js"></script>
   <script src="http://static.boggy.tw/vendor/qrcodesvg/raphael-2.1.0-min.js"></script>
   <script src="http://static.boggy.tw/vendor/qrcodesvg/qrcodesvg.js"></script>
+  <script src="http://static.boggy.tw/vendor/FileSaver/1.3.2/FileSaver.min.js"></script>
   <script src="assets/js/app.php?v=<?= filemtime('assets/js/app.php'); ?>"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

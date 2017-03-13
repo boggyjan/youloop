@@ -71,12 +71,18 @@ a {
   background: #aaa;
 }
 
-  .clear-btn {
+  .history-actions {
     float: right;
     position: relative;
     top: -5px;
   }
-  
+    
+    .import-file-container {
+      width: 0px;
+      height: 0px;
+      overflow: hidden;
+    }
+
   .history .item {
     overflow: hidden;
     padding: 10px 40px;

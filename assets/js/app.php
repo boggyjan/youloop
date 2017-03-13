@@ -4,12 +4,12 @@
 
   "use strict";
 
-  var STORAGE_KEY = 'youloop-1.1';
-  var PLAYER_WIDTH = '640';
-  var PLAYER_HEIGHT = '390';
+  const STORAGE_KEY = 'youloop-1.1';
+  const PLAYER_WIDTH = '640';
+  const PLAYER_HEIGHT = '390';
 
   // 要新增一個site的時候要先確認他的縮圖api, url regexp, info(oembed) 是否有能力取得
-  var siteRules = {
+  const siteRules = {
     youtube: {
       regexp: new RegExp(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^\/&]{10,12})/)
     },
@@ -297,6 +297,47 @@
           this.history = [];
           historyStorage.save(this.history);
           ga('send', 'event', '清除歷史紀錄');
+        }
+      },
+
+      exportHistory: function() {
+
+        if (this.history.length) {
+          var data = {
+            key: STORAGE_KEY,
+            history: this.history
+          }
+          var blob = new Blob([JSON.stringify(data)], {type: 'text/plain;charset=utf-8'});
+          saveAs(blob, 'youloop_history.txt');
+
+          ga('send', 'event', '匯出歷史紀錄');
+        }
+      },
+
+      importHistory: function() {
+        $('.import-file').trigger('click');
+        ga('send', 'event', '匯入歷史紀錄');
+      },
+
+      importHistoryDataSelected: function(e) {
+        var file = e.target.files[0];
+        var _self = this;
+
+        if (file) {
+          var reader = new FileReader();
+
+          reader.onload = function(readerEvt) {
+            var imported = JSON.parse(readerEvt.target.result);
+
+            if (imported.key == STORAGE_KEY) {
+              if (confirm('<?= __('確認是否取代目前資料？') ?>')) {
+                _self.history = imported.history;
+                historyStorage.save(_self.history);
+                alert('<?= __('匯入成功！') ?>');
+              }
+            }
+          };
+          reader.readAsText(file);
         }
       }
     },

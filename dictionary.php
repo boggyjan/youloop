@@ -31,7 +31,23 @@
     ],
     '清除歷史' => [
       ja => '履歴を削除する',
-      en => 'Clear all history'
+      en => 'Clear all'
+    ],
+    '匯入' => [
+      ja => '輸入',
+      en => 'import'
+    ],
+    '匯出' => [
+      ja => '輸出',
+      en => 'export'
+    ],
+    '確認是否取代目前資料？' => [
+      ja => '今の履歴を替わりますか？',
+      en => 'Are you sure using imported data instead old history data?'
+    ],
+    '匯入成功！' => [
+      ja => '無事終了！',
+      en => 'Successfully imported!'
     ],
     '這個不是YouTube, Dailymotion或Xuite影片網址喔！' => [
       ja => 'これはYouTube, DailymotionあるいはXuiteのURLではありません。',
