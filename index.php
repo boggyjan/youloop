@@ -91,8 +91,8 @@
           <span class="badge">{{history.length}}</span>
 
           <div class="btn-group history-actions" role="group" aria-label="...">
-            <a class="btn btn-sm btn-default clear-btn" @click="exportHistory"><?= __('匯出') ?></a>
-            <a class="btn btn-sm btn-default clear-btn" @click="importHistory"><?= __('匯入') ?></a>
+            <a class="btn btn-sm btn-default hidden-xs clear-btn" @click="exportHistory"><?= __('匯出') ?></a>
+            <a class="btn btn-sm btn-default hidden-xs clear-btn" @click="importHistory"><?= __('匯入') ?></a>
             <a class="btn btn-sm btn-default clear-btn" @click="clearHistory"><?= __('清除歷史') ?></a>
           </div>
 

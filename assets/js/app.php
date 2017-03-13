@@ -327,7 +327,14 @@
           var reader = new FileReader();
 
           reader.onload = function(readerEvt) {
-            var imported = JSON.parse(readerEvt.target.result);
+            var imported;
+
+            try {
+              imported = JSON.parse(readerEvt.target.result);
+            } catch (e) {
+              alert('<?= __('匯入檔案格式錯誤。') ?>');
+              return;
+            }
 
             if (imported.key == STORAGE_KEY) {
               if (confirm('<?= __('確認是否取代目前資料？') ?>')) {
@@ -335,6 +342,9 @@
                 historyStorage.save(_self.history);
                 alert('<?= __('匯入成功！') ?>');
               }
+            }
+            else {
+              alert('<?= __('匯入檔案版本太舊。') ?>');
             }
           };
           reader.readAsText(file);

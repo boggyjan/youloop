@@ -41,6 +41,14 @@
       ja => '輸出',
       en => 'export'
     ],
+    '匯入檔案格式錯誤。' => [
+      ja => '輸入したファイルはYouLoop履歴ファイルじゃありません。',
+      en => 'This is not YouLoop history file.'
+    ],
+    '匯入檔案版本太舊。' => [
+      ja => '輸入した履歴バージョンは古すぎます。',
+      en => 'Data version is too old.'
+    ],
     '確認是否取代目前資料？' => [
       ja => '今の履歴を替わりますか？',
       en => 'Are you sure using imported data instead old history data?'
