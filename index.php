@@ -135,7 +135,7 @@
     </div>
 
     <div class="footer">
-      Copyright © <?php echo date("Y"); ?> Boggy Jang. All rights reserved.
+      Copyright © <?= date("Y"); ?> Boggy Jang. All rights reserved.
     </div>
   </div>
   
