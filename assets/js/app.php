@@ -11,7 +11,7 @@
   // 要新增一個site的時候要先確認他的縮圖api, url regexp, info(oembed) 是否有能力取得
   const siteRules = {
     youtube: {
-      regexp: new RegExp(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^\/&]{10,12})/)
+      regexp: new RegExp(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?.*v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^\/&/?]{10,12})/)
     },
     dailymotion: {
       regexp: new RegExp(/(?:dailymotion\.com(?:\/video|\/hub)|dai\.ly)\/([0-9a-z]+)(?:[\-_0-9a-zA-Z]+#video=([a-z0-9]+))?/)
@@ -68,7 +68,7 @@
 
             if (this.videoURL.match(regexp)) {
               var videoID = this.videoURL.match(regexp)[1];
-              
+
               if (videoID) {
                 this.play({video_id: videoID, type: i});
                 return;
