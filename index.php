@@ -22,17 +22,17 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="YouLoop">
   <meta name="twitter:description" content="<?= __('貼上YouTube, Dailymotion或Xuite影片網址，就為您重播到死！') ?>">
-  <meta name="twitter:image" content="http://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
+  <meta name="twitter:image" content="https://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="YouLoop">
   <meta property="og:description" content="<?= __('貼上YouTube, Dailymotion或Xuite影片網址，就為您重播到死！') ?>">
-  <meta property="og:url" content="http://app.boggy.tw/youloop">
+  <meta property="og:url" content="https://app.boggy.tw/youloop">
   <meta property="og:site_name" content="YouLoop">
-  <meta property="og:image" content="http://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
+  <meta property="og:image" content="https://app.boggy.tw/youloop/assets/images/sns_share_img.jpg">
 
-  <link rel="stylesheet" href="http://static.boggy.tw/vendor/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://static.boggy.tw/vendor/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//static.boggy.tw/vendor/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//static.boggy.tw/vendor/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/app.css?v=<?= filemtime('assets/css/app.css'); ?>">
 
 </head>
