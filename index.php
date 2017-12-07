@@ -141,13 +141,13 @@
   
 
   <!--<script src="https://www.youtube.com/iframe_api"></script>-->
-  <script src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflWbfRpo/www-widgetapi.js"></script>
-  <script src="https://api.dmcdn.net/all.js"></script>
-  <script src="http://static.boggy.tw/vendor/jquery/jquery-3.1.1.min.js"></script>
-  <script src="http://static.boggy.tw/vendor/vue.js/2.1.10/vue.min.js"></script>
-  <script src="http://static.boggy.tw/vendor/qrcodesvg/raphael-2.1.0-min.js"></script>
-  <script src="http://static.boggy.tw/vendor/qrcodesvg/qrcodesvg.js"></script>
-  <script src="http://static.boggy.tw/vendor/FileSaver/1.3.2/FileSaver.min.js"></script>
+  <script src="//s.ytimg.com/yts/jsbin/www-widgetapi-vflWbfRpo/www-widgetapi.js"></script>
+  <script src="//api.dmcdn.net/all.js"></script>
+  <script src="//static.boggy.tw/vendor/jquery/jquery-3.1.1.min.js"></script>
+  <script src="//static.boggy.tw/vendor/vue.js/2.1.10/vue.min.js"></script>
+  <script src="//static.boggy.tw/vendor/qrcodesvg/raphael-2.1.0-min.js"></script>
+  <script src="//static.boggy.tw/vendor/qrcodesvg/qrcodesvg.js"></script>
+  <script src="//static.boggy.tw/vendor/FileSaver/1.3.2/FileSaver.min.js"></script>
   <script src="assets/js/app.php?v=<?= filemtime('assets/js/app.php'); ?>"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
